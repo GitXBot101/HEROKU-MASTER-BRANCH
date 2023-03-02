@@ -199,11 +199,11 @@ def ping(update, context):
         start_time = int(round(time() * 1000))
         reply = sendMessage("Starting_Ping ", context.bot, update.message)
         end_time = int(round(time() * 1000))
-        editMessage(f'<b>Ping: </b>{end_time - start_time} ms'\n
-                    f'<b>Updated On: </b>{last_commit}\n'\
-                    f'<b>Uptime: </b>{currentTime}\n'\
-                    f'<b>Version: </b>{version}\n'\
-                    f'<b>OS Uptime: </b>{osUptime}\n'\, reply)
+        editMessage(f'''<b>Ping: </b>{end_time - start_time}ms
+                        <b>Updated On: </b>{last_commit}\n
+                        <b>Uptime: </b>{currentTime}\n
+                        <b>Version: </b>{version}\n
+                        <b>OS Uptime: </b>{osUptime}\n''' , reply)
 
 def log(update, context):
     sendLogFile(context.bot, update.message)
